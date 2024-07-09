@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import SmoothScroller from "@/components/lenis";
 
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={jakartaSans.className}>{children}</body>
+      <body className={jakartaSans.className}>
+        <SmoothScroller />
+        {children}</body>
     </html>
   );
 }
